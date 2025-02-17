@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://tse3-mm.cn.bing.net/th/id/OIP-C.3km1icpIVZB3d4flVs-JRgHaEK?w=299&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
 <meta property="article:published_time" content="2025-01-17T02:48:51.000Z">
-<meta property="article:modified_time" content="2025-01-17T03:27:02.833Z">
+<meta property="article:modified_time" content="2025-02-17T10:23:29.627Z">
 <meta property="article:author" content="李家宁">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://tse3-mm.cn.bing.net/th/id/OIP-C.3km1icpIVZB3d4flVs-JRgHaEK?w=299&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"><script type="application/ld+json">{
@@ -17,7 +17,7 @@
   "url": "http://example.com/2025/01/17/%E5%8F%8C%E5%86%99%E7%BB%95%E8%BF%87/",
   "image": "https://tse3-mm.cn.bing.net/th/id/OIP-C.3km1icpIVZB3d4flVs-JRgHaEK?w=299&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
   "datePublished": "2025-01-17T02:48:51.000Z",
-  "dateModified": "2025-01-17T03:27:02.833Z",
+  "dateModified": "2025-02-17T10:23:29.627Z",
   "author": [
     {
       "@type": "Person",
@@ -158,7 +158,7 @@
   isHighlightShrink: false,
   isToc: false,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">欢迎</span></a><a class="nav-page-title" href="/"><span class="site-name">双写绕过</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">双写绕过</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-17T02:48:51.000Z" title="发表于 2025-01-17 10:48:51">2025-01-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-17T03:27:02.833Z" title="更新于 2025-01-17 11:27:02">2025-01-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>以ctfshowweb入门52题为例</p>
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">欢迎</span></a><a class="nav-page-title" href="/"><span class="site-name">双写绕过</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">双写绕过</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-17T02:48:51.000Z" title="发表于 2025-01-17 10:48:51">2025-01-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-17T10:23:29.627Z" title="更新于 2025-02-17 18:23:29">2025-02-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>以ctfshowweb入门52题为例</p>
 <p>代码审计</p>
 <p><img src="/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-17%20104221.png" alt="alt text"><br>1，过滤了;,cat，flag空格’数字，more,less,head,sort,tail,sed,cut,tac,awk,strings,od,curl,<code>,\,\x09,\x26,\&gt;,\&lt;, i</code> 是一个标志，表示不区分大小写匹配。</p>
 <p>2，发现system($c.” &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1”);  （相当于一个黑洞）</p>
@@ -166,7 +166,7 @@
 <p>&#x2F;dev&#x2F;null：这是一个输出重定向操作符。&gt;&#x2F;dev&#x2F;null 表示将命令的标准输出重定向到 &#x2F;dev&#x2F;null，在 Unix&#x2F;Linux 系统中，&#x2F;dev&#x2F;null 是一个特殊的设备文件，任何写入到它的数据都会被丢弃，这意味着命令的正常输出将不会显示在屏幕上或返回给 PHP 脚本。<br>2&gt;&amp;1：这个部分是将标准错误输出（文件描述符为 2）重定向到标准输出（文件描述符为 1）。这意味着如果执行的命令产生错误，错误信息也会被重定向到 &#x2F;dev&#x2F;null 并被丢弃。<br>导致c的返回结果是不显示的</p>
 </blockquote>
 <p>使用双写绕过<br>由于通道符被过滤了<br>可以用复制或者重命名的方法<br>?c&#x3D;cp$IFSfla?.php$IFSa.txt||ls<br>c.txt<br>发现了一个假的flag<br><img src="/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-17%20111824.png" alt="alt text"><br>查看根目录<br>?c&#x3D;ls${IFS}&#x2F;||ls<br><img src="/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-17%20112137.png" alt="alt text"><br>发现了根目录下有flag<br>复制出来<br>?c&#x3D;cp${IFS}&#x2F;fla?${IFS}&#x2F;var&#x2F;www&#x2F;html&#x2F;c.txt||ls<br>c.txt<br><img src="/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-17%20104043.png" alt="alt text"><br>得到flag</p>
-<p>42题-52题知识点总结<br>黑洞：system($c.”  &gt;&#x2F;dev&#x2F;null 2&gt;$1”)<br>使用双写绕过<br>1，用；c&#x3D;ls:ls     用;进行分割分化，将后面的ls命令写进黑洞<br>2，;被过滤，使用&amp;&amp;符号（&amp;&amp;符号需要进行编码为%26%26）$$符号代表第一个命令执行成功以后才执行第二个命令。<br>3，空格被过滤，用$IFS,</p>
+<p>42题-52题知识点总结<br>黑洞：system($c.”  &gt;&#x2F;dev&#x2F;null 2&gt;$1”)<br>使用双写绕过<br>1，用；c&#x3D;ls:ls     用;进行分割分化，将后面的ls命令写进黑洞<br>2，;被过滤，使用&amp;&amp;符号（&amp;&amp;符号需要进行编码为%26%26）&amp;&amp;符号代表第一个命令执行成功以后才执行第二个命令。<br>3，空格被过滤，用$IFS,</p>
 <p>（1）nl&lt;fla”g.php||ls     ||编码为%7C%7C    用”分割执行时会忽略</p>
 <p>几种绕过空格的方式 {cat,flag.txt} cat${IFS}flag.txt cat$IFS$9flag.txt cat&lt;flag.txt&#x2F;&#x2F;这俩&lt;&gt;貌似没啥用 cat&lt;&gt;flag.txt</p>
 <p>cat%0afla?.php cat%09fla?.php 这俩的区别是后者用于语句中间，前者可以用来做末尾的截断</p>
